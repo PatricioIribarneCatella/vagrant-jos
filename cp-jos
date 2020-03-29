@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Copy shared JOS directory in /vagrant
+# into $HOME directory for testing.
+#
+# This is necesary because of the
+# shared-files mechanism of Vagrant.
+# JOS uses 'MAP_SHARED' mmap(2) flag
+# in its file system for creating it
+# (see LAB5 fs/fsformat.c:103)
+# and it can't be performed between
+# host and guest shared files.
+
+set -eu
+
+mkdir -p $HOME/jos
+cp -r /vagrant/jos/* $HOME/jos
