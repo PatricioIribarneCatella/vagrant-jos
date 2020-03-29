@@ -16,6 +16,7 @@ Vagrant.configure(2) do |config|
 		sudo apt-get install -y git make gdb qemu-system-x86 python3-dev
 		sudo apt-get install -y seabios libbsd-dev gcc-multilib libc6-dev linux-libc-dev
 		sudo cp /vagrant/cp-jos /usr/local/bin
+		cp-jos
 	SHELL
 end
 
