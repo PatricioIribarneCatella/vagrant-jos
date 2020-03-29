@@ -1,1 +1,3 @@
 jos/
+.vagrant/
+*.log
